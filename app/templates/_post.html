@@ -1,0 +1,17 @@
+<table>
+    <tr valign="top">
+       
+        <td width="70px">
+            <a href="{{ url_for('main.user', username=post.author.username) }}">
+                {{ post.author.username }}
+            </a>
+        </td>
+
+        <td>
+            <a href="{{ url_for('main.user', username=post.author.username) }}">
+                {{ post.author.username }}
+            </a>
+            says:<br> {{ post.body }}
+        </td>
+    </tr>
+</table>

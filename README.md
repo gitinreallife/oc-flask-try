@@ -1,4 +1,4 @@
-# Opencloud Dashboard - Main Service #
+# Dashboard - Main Service #
 
 Main service for Opencloud dashboard that consist (may change)
 
@@ -16,7 +16,7 @@ Main service for Opencloud dashboard that consist (may change)
 1. List all dependencies (3rd party libs)
 2. Provide API reference document.
 
-
+See requirements.txt for full list
 python3 -m venv venv
 pip install flask
 pip install python-dotenv

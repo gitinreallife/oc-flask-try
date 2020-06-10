@@ -1,11 +1,22 @@
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, jsonify, current_app
 from flask_login import current_user, login_required
-from app import db
-from app.main.forms import EditProfileForm, PostForm
+from app import db, socketio
+from app.main.forms import EditProfileForm
 from app.models import User
 from app.main import bp
+# from flask_socketio import send, emit
 
+
+# receive from frontend
+@socketio.on('my event')
+def handle_custom_event(param):
+    print('received args: ' + param['data'])
+
+# # sendit baby!!
+# @socketio.on('my event')
+# def handle_custom_event_send(json):
+#     emit('send it babyyy!', json)
 
 # The @before_request decorator from Flask register the decorated
 # function to be executed right before the view function

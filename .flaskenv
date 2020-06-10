@@ -1,0 +1,9 @@
+FLASK_APP=oc-dashboard-main.py
+FLASK_DEBUG=1
+MAIL_SERVER=smtp.googlemail.com
+MAIL_PORT=587
+MAIL_USE_TLS=1
+MAIL_USERNAME='git.bachin@gmail.com'
+MAIL_PASSWORD='30121994'
+SECRET_KEY=a-really-long-and-unique-key-that-nobody-knows
+DATABASE_URL='postgres://localhost/dashboard_flask_db?user=hologit&password=30121994'

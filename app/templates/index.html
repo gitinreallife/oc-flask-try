@@ -10,7 +10,7 @@
     {% for post in posts %}
         {% include '_post.html' %}
     {% endfor %}
-    <nav aria-label="...">
+    <nav aria-label="..." onload="onloadNav()">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">
                 <a href="{{ prev_url or '#' }}">
@@ -24,4 +24,15 @@
             </li>
         </ul>
     </nav>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io();
+        socket.on('connect', function() {
+            socket.emit('get-rt-usage')
+            socket.on('listen-rt-usage', function(data){
+                console.log('listen--------------')
+                console.log(data)
+            })
+        });
+    </script> -->
 {% endblock%}
